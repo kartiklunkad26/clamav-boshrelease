@@ -16,22 +16,21 @@ bosh create release --force
 bosh create release --force --final
 bosh upload release
 ```
+#### Creating a Bosh Add-On for ClamAV
 
-### Create a BOSH deployment manifest
+### Create a BOSH deployment manifest 
 
-Please refer to the file example-manifest.yml for an example of the deployment manifest.
+Please refer to the file example-manifest.yml for an example of the deployment manifest for a BOSH Add-on. 
 
-### Deploy using the BOSH deployment manifest
+### Update the runtime-config
 
 Using the previous created deployment manifest, now we can deploy it:
 
 ```
-bosh deployment path/to/deployment.yml
+bosh update runtime-config clamav-addon.yml
 bosh -n deploy
 ```
 
-#### Proxy support
 
-If your vms require a proxy in order to get internet access to fetch the ClamAV virus definition updates, set the properties clamav.proxyHost and clamav.proxyPort to the Host/IP and Port number of the proxy.
 
 
