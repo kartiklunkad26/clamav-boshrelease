@@ -1,0 +1,13 @@
+releases:
+- {name: clamav, version: '0.11.0'}
+
+addons:
+- name: clamav-addon
+  jobs:
+  - name: clamav
+    release: clamav
+  properties:
+    clamav:
+        dbMirror1: db.local.clamav.net
+        dbMirror2: database.clamav.net
+        useProxy: false
