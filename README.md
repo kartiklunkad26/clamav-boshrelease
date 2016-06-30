@@ -16,7 +16,7 @@ bosh create release --force
 bosh create release --force --final
 bosh upload release
 ```
-#### Creating a Bosh Add-On for ClamAV
+## Creating a Bosh Add-On for ClamAV
 
 ### Create a BOSH deployment manifest 
 
